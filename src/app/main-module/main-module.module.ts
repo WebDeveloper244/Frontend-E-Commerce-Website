@@ -6,7 +6,8 @@ import { MainModuleComponent } from './main-module.component';
 import { HeaderComponent } from './main-component/header/header.component';
 import { FooterComponent } from './main-component/footer/footer.component';
 import { HomeComponent } from './main-component/home/home.component';
-import { AppRoutingModule } from '../app-routing.module';
+import { AboutUsComponent } from './main-component/about-us/about-us.component';
+
 
 
 @NgModule({
@@ -14,12 +15,13 @@ import { AppRoutingModule } from '../app-routing.module';
     MainModuleComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    AboutUsComponent
   ],
   imports: [
     CommonModule,
     MainModuleRoutingModule,
-    AppRoutingModule
+    
   ]
 })
 export class MainModuleModule { }
