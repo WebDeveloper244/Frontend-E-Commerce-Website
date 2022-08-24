@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './main-component/about-us/about-us.component';
 import { CheckOutComponent } from './main-component/check-out/check-out.component';
+import { ContactUsComponent } from './main-component/contact-us/contact-us.component';
 import { EditCardComponent } from './main-component/edit-card/edit-card.component';
 import { HomeComponent } from './main-component/home/home.component';
 import { ProductsComponent } from './main-component/products/products.component';
@@ -31,6 +32,10 @@ const routes: Routes = [{ path: '', component: MainModuleComponent,children:[
   {
     path:"about-us",
     component:AboutUsComponent
+  },
+  {
+    path:"contact-us",
+    component:ContactUsComponent
   },
   {
     path:"check-out",
