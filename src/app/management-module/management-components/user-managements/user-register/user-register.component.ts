@@ -8,18 +8,22 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class UserRegisterComponent implements OnInit {
  userRegisterForm:any|FormGroup
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder) { 
+    this.Form()
+  }
 
   ngOnInit(): void {
+    
   }
 
   Form(){
     this.userRegisterForm = this.formBuilder.group({
-      fName:[['',Validators.required,Validators.minLength(30),Validators.maxLength(35),Validators.pattern(/^[A-Za-z]*$/)]],
-      lName:[['',Validators.required,Validators.minLength(30),Validators.maxLength(35),Validators.pattern(/^[A-Za-z]*$/)]],
-      Email:[['',Validators.required,Validators.email]],
-      Password:[['',Validators.required,]],
-      CPassword:[['',Validators.required]]
+      fName:['',[Validators.required,Validators.minLength(4),Validators.maxLength(35),Validators.pattern(/^[A-Za-z]*$/)]],
+      lName:['',[Validators.required,Validators.minLength(4),Validators.maxLength(35),Validators.pattern(/^[A-Za-z]*$/)]],
+      Email:['',[Validators.required,Validators.email]],
+      Number:['',[Validators.required,Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
+      Password:['',[Validators.required,]],
+      CPassword:['',[Validators.required]]
     })
   }
   registerUserForm(){
