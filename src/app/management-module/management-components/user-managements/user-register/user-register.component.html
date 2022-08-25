@@ -36,23 +36,23 @@
         <h2>Login</h2>
         <form (ngSubmit)="registerUserForm()" [formGroup]="userRegisterForm" >
           <div class="user-box">
-            <input type="text" name="" required="" >
+            <input type="text" name="" required="" formControlName="fName">
             <label>First-Name</label>
           </div>
           <div class="user-box">
-            <input type="text" name="" required="">
+            <input type="text" name="" required="" formControlName="" formControlName="lName">
             <label>Last-Name</label>
           </div>
           <div class="user-box">
-            <input type="email" name="" required="">
+            <input type="email" name="" required="" formControlName="">
             <label>Email</label>
           </div>
           <div class="user-box">
-            <input type="password" name="" required="" autocomplete="off">
+            <input type="password" name="" required="" autocomplete="off" formControlName="Password">
             <label>Password</label>
           </div>
           <div class="user-box">
-            <input type="password" name="" required="">
+            <input type="password" name="" required="" formControlName="CPassword">
             <label>Conform-Password</label>
           
             <small class="text-white">If you are alredy Register? go to <a routerLink="/Management-Module/user-login">Login</a></small>
