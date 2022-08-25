@@ -15,15 +15,15 @@ export class UserRegisterComponent implements OnInit {
 
   Form(){
     this.userRegisterForm = this.formBuilder.group({
-      fName:[[''],Validators.required,],
-      lName:[[''],Validators.required],
-      Email:[[''],Validators.required,Validators.email],
-      Password:[[''],Validators.required],
-      CPassword:[[''],Validators.required],
+      fName:[['',Validators.required,Validators.minLength(30),Validators.maxLength(35),Validators.pattern(/^[A-Za-z]*$/)]],
+      lName:[['',Validators.required,Validators.minLength(30),Validators.maxLength(35),Validators.pattern(/^[A-Za-z]*$/)]],
+      Email:[['',Validators.required,Validators.email]],
+      Password:[['',Validators.required,]],
+      CPassword:[['',Validators.required]]
     })
   }
   registerUserForm(){
-    
+
   }
 
 }
