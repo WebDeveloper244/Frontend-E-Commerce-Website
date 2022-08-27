@@ -51,7 +51,7 @@
 .menu-items li{
     list-style: none;
     margin-left: 1.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .navbar a{
@@ -86,19 +86,15 @@
     } */
 
     ul>li>a{
-        color: rgb(247, 247, 247);
+        color: rgb(255, 255, 255);
       }
             
       ul>li>a:hover {
-          color: #fff;
+          color: rgb(255, 255, 255);
           text-shadow:
-          0 0 5px #0ff,
-          0 0 5px #0ff,
-          0 0 5px #0ff,
-          0 0 5px #0ff,
-          0 0 5px #0ff,
-          0 0 5px #0ff,
-          0 0 5px #0ff;
+          0 0 5px rgb(243, 255, 255),
+          0 0 5px rgb(243, 255, 255);
+         
          
          
          
