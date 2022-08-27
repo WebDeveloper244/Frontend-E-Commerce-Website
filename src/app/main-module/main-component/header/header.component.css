@@ -51,7 +51,7 @@
 .menu-items li{
     list-style: none;
     margin-left: 1.5rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .navbar a{
@@ -62,7 +62,7 @@
 }
 
 /************************** nav-bar-hover */
-ul>li>a{
+/* ul>li>a{
     color: rgb(247, 247, 247);
   }
         
@@ -83,7 +83,30 @@ ul>li>a{
           -o-transition: all 0.2s ease-out;
           -webkit-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
-    }
+    } */
+
+    ul>li>a{
+        color: rgb(247, 247, 247);
+      }
+            
+      ul>li>a:hover {
+          color: #fff;
+          text-shadow:
+          0 0 5px #0ff,
+          0 0 5px #0ff,
+          0 0 5px #0ff,
+          0 0 5px #0ff,
+          0 0 5px #0ff,
+          0 0 5px #0ff,
+          0 0 5px #0ff;
+         
+         
+         
+            -moz-transition: all 0.2s ease-out;
+              -o-transition: all 0.2s ease-out;
+              -webkit-transition: all 0.2s ease-out;
+              transition: all 0.2s ease-out;
+        }
 
 /**************************  */
 
