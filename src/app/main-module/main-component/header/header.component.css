@@ -37,16 +37,22 @@
     justify-content: space-between;
     height: 64px;
     align-items: center;
+    margin-top: 5vh;
 }
 
 .menu-items{
     order: 2;
     display: flex;
 }
-.logo{
+/* .logo{
     /* order: 1; */
-    font-size: 2.3rem;
-}
+/*     
+    background-image: url('../../../../assets/Images/blkops-logo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px; */
+
 
 .menu-items li{
     list-style: none;
