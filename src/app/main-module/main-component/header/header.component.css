@@ -39,6 +39,19 @@
     align-items: center;
     margin-top: 5vh;
 }
+.fa-cart-shopping{
+   
+position: relative;
+top: 0px;
+bottom: 13px;
+font-size: 27px;
+}
+.fa-sort-down{
+    margin-left: -20px;
+font-size: 16px;
+position: absolute;
+bottom: 20px;
+}
 
 .menu-items{
     order: 2;
