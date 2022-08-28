@@ -16,14 +16,20 @@ ul>li>a{
 ul>li>a:hover {
     color: #fff;
     text-shadow:
+    0 0 5px blue,
+    0 0 5px blue,
+    0 0 5px blue,
+    0 0 5px blue,
+    0 0 5px blue,
+    0 0 5px blue,
+    0 0 5px blue,
+    0 0 5px blue,
+    0 0 5px blue;
+    /* 0 0 5px #0ff,
     0 0 5px #0ff,
     0 0 5px #0ff,
     0 0 5px #0ff,
-    0 0 5px #0ff,
-    0 0 5px #0ff,
-    0 0 5px #0ff,
-    0 0 5px #0ff,
-    0 0 5px #0ff;
+    0 0 5px #0ff; */
       -moz-transition: all 0.2s ease-out;
         -o-transition: all 0.2s ease-out;
         -webkit-transition: all 0.2s ease-out;
@@ -32,19 +38,11 @@ ul>li>a:hover {
 
   .sidebar{
     /* background: #0800ff; */
-      background-image: linear-gradient(to bottom right, rgb(0, 0, 0),rgb(0, 81, 255));
+      background-image: linear-gradient(to bottom right, rgb(0, 0, 0),rgb(14, 52, 136));
   }
-  .btn1{
-    border-color: rgb(255, 255, 255);
-    background: rgba(0, 0, 0, 0);
-    margin-right: 15px;
-    border-radius: 8px;
-    width: 58px;
-  }
-  .btn1:hover{
-    color: red;
-  }
- 
+ .btn{
+  cursor: pointer;
+ }
   @media (max-width:768px){
     .navbar-brand{
          margin-left: 57px;
