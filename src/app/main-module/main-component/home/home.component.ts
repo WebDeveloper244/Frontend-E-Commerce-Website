@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
  
     this.volatileService.saveDataToLocalStorage(Id)
     this.messanger.sendMessageFromMyData(Id)
-    this.Router.navigate(['cart']);
+    this.Router.navigate(['view-product']);
    
    
   }
