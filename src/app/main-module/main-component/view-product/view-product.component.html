@@ -1,1 +1,36 @@
-<p>view-product works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1 class="text-primary productHeading">Name: {{FilteredObject[0].Name}}</h1>
+                <h3 >Quantity: {{FilteredObject[0].qty}}</h3>
+            <img *ngFor="let item of FilteredObject[0].image" [src]="item" alt="" srcset="">
+        </div>
+       
+        <div class="col-md-5">
+            <div class="container c1 ">
+                <div *ngIf="showBox===false">
+                    <h3 class="text-center">Nothing Has Selected</h3>
+                </div>
+            </div>
+            
+
+            <div class="container boxshow ">
+                <div *ngIf="showBox===true">
+                    <div *ngFor="let _Data of GetSaveDataFromLocalStorage">
+                        <img [src]="_Data.image[0]" alt="" class="w-25 h-25">
+                        <span >SelectedQuantity: <p class="ms-1">{{_Data.newQuantity}}</p></span>
+                    </div>
+                    <!-- <span class=""> TotalCartQuantity: <p class="ms-1">{{totalQuantity}}</p></span> -->
+                </div>
+            </div>
+            <div class="box">
+                <button type="button" class="btn1" (click)="addQuantity()" >+</button>
+            <span class="ms-2 me-2">{{selectedQuantity}}</span>
+            <button type="button" class="btn1" (click)="SubtractQuantity()">-</button>
+            </div>
+        </div>
+        
+        <div class="col-md-3"></div>
+    </div>
+
+</div>
