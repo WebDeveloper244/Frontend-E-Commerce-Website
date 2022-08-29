@@ -246,19 +246,32 @@ img{
     font-style: italic;
     margin-top: 35px;
 }
+.formGroup{
+    margin-left: 28vh;
+}
 .select-size{
     display: inline;
-    border: 1 px solid black;
+    
 }
 .select-size>label{
     display: inline-block;
-padding: 13px;
-width: 94px;
-text-align: center;
-margin-right: 4px;
-cursor: pointer;
-
+    padding: 13px;
+    width: 94px;
+    text-align: center;
+    margin-right: 4px;
+    cursor: pointer;
+    border: 1px solid black;
+    margin-top: 55px;
 }
+.select-size>label:focus{
+    background: rgb(224, 28, 28);
+    color: rgb(0, 255, 42);
+ }
+.select-size>label:hover{
+   background: #000;
+   color: white;
+}
+
 .select-size>input{
     display: none;
 }
