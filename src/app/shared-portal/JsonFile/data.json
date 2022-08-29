@@ -12,7 +12,8 @@
     "title": "Best Brand Of Cap",
     "qty": 10,
     "newQuantity":0,
-    "productCategorie" : "Latest"
+    "productCategorie" : "Latest",
+    "productPrice": 2000
   },
     
     {
@@ -28,7 +29,8 @@
       "title": "Best Brand Of Ball",
       "qty": 7,
       "newQuantity":0,
-      "productCategorie" : "Latest"
+      "productCategorie" : "Latest",
+      "productPrice": 10000
     },
     {
       "id": 3,
@@ -42,7 +44,8 @@
       "title": "Best Brand Of Bat",
       "qty": 6,
       "newQuantity":0,
-      "productCategorie" : "Latest"
+      "productCategorie" : "Latest",
+      "productPrice": 3000
     },
    
     {
@@ -58,7 +61,8 @@
       
       "title": "Best company of Bat",
       "qty": 10,
-      "newQuantity":0
+      "newQuantity":0,
+      "productPrice": 5000
     },
    
     {
@@ -75,7 +79,8 @@
       
       "title": "Best Brand Of Shoes",
       "qty": 0,
-      "newQuantity":0
+      "newQuantity":0,
+      "productPrice": 12000
     },
     {
       "id": 6,
@@ -89,7 +94,8 @@
       
       "title": "Best Brand Of Watch",
       "qty": 0,
-      "newQuantity":0
+      "newQuantity":0,
+      "productPrice": 50000
      
     }
     

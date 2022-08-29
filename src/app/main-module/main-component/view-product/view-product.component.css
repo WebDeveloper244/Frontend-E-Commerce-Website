@@ -162,6 +162,16 @@
    }
 
 /******************************** Header-Section */
+.container{
+    margin-top: fixed;
+}
+h5{
+    color: #212529;
+    line-height: 24px;
+    font-style: italic;
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
 img{
     margin-top: 20px;
      /* border-radius: 27px; */
@@ -274,4 +284,93 @@ img{
 
 .select-size>input{
     display: none;
+}
+.availabel>h5{
+    color: #212529;
+    line-height: 24px;
+    font-style: italic;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+.availabel>span{
+    color: #212529;
+    line-height: 24px;
+    font-style: italic;
+    margin-top: 35px;
+    margin-right: 3px;
+}
+.availabel>.st{
+    display: inline-block;
+    list-style-type: none;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 2px;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+.availabel>.st:hover{
+    border: 1px solid blue;
+    background: blue;
+    color: white;
+   
+}
+.red{
+    border: 1px solid rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    list-style-type: none;
+    padding: 2px;
+    font-size: 13px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+.red:hover{
+    background: red;
+    color: white;  
+    border: 1px solid red;
+}
+
+
+.black{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid black; 
+    display: inline-block;
+    list-style-type: none;
+    padding: 2px;
+    font-size: 13px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+.black:hover{
+    background: black;
+    color: white;  
+}
+.QTY>ul{
+    padding: 7px;
+display: inline-block;
+width: 40px;
+height: 40px;
+cursor: pointer;
+font-size: 17px;
+font-weight: bold;
+border: 1px solid #2c9f45;
+list-style-type: none;
+margin-left: 16px;
+}
+.QTY>ul:hover{
+border: 1px solid #2c9f45;
+background: rgb(226, 226, 226);
+color:#2c9f45 ;
+
+}
+.btn-outline-dark{
+    border-radius: 0px;
+    padding: 10px;
+    display: block;
+    margin-left: 23vh;
+    margin-top: 10px;
 }

@@ -34,8 +34,8 @@
             </div>
 
             <div class="cart-info text-center">
-                <h3>Caps Different</h3><br>
-                <span>RS 2000</span>
+                <h3>Product: {{FilteredObject[0].Name}}</h3><br>
+                <span>RS {{FilteredObject[0].productPrice}}</span>
                 <h5>Please Select Size</h5>
             </div>
 
@@ -55,6 +55,43 @@
                </div>
               </div>
             </form>
+
+            <div class="availabel text-center mt-5">
+                <h5>Available-Colors</h5>
+                <span>Colors:</span>
+                <ul class="st" >
+                    <li class="text-center">Blue</li>
+                </ul>
+                <ul class="red">
+                    <li class="text-center">Red</li>
+                </ul>
+                <ul class="black">
+                    <li class="text-center">Black</li>
+                </ul>
+            </div>
+          
+            <div class="text-center QTY">
+                <h5>Quantity In Stoke</h5>
+                <ul>
+                    <li>{{FilteredObject[0].qty}}</li>
+                </ul>
+            </div>
+            <div class="text-center QTY">
+                <h5>Please Select Quantity</h5>
+                <ul>
+                    <li type="button"(click)="SubtractQuantity()">+</li>
+                </ul>
+                <ul>
+                    <li>{{selectedQuantity}}</li>
+                </ul>
+                <ul>
+                    <li type="button"(click)="addQuantity()">+</li>
+                </ul>
+                <button class="btn btn-outline-dark btn11 w-50" >Add To Cart</button>
+                <button class="btn btn-outline-dark btn11 w-50" >View Cart</button>
+                <button class="btn btn-outline-dark btn11 w-50" >Continue Shopping</button>
+                <button class="btn btn-outline-dark btn11 w-50" >Go To Home</button>
+            </div>
             
 
             <div class="container boxshow">
@@ -66,14 +103,13 @@
                     <!-- <span class=""> TotalCartQuantity: <p class="ms-1">{{totalQuantity}}</p></span> -->
                 </div>
             </div>
-            <div class="box text-center">
+            <!-- <div class="box text-center">
                 <button type="button" class="btn1" (click)="addQuantity()" >+</button>
             <span class="ms-2 me-2">{{selectedQuantity}}</span>
             <button type="button" class="btn1" (click)="SubtractQuantity()">-</button>
-            </div>
+            </div> -->
         </div>
         
-        <!-- <div class="col-md-3"></div>
-    </div> -->
+       
 
 </div>
