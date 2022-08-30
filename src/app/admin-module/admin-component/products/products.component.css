@@ -1,0 +1,39 @@
+.container{
+    border: 1px solid black;
+    background-image: linear-gradient(to top right, rgb(0, 0, 0), rgb(13, 22, 77));
+    margin-top: 10vh;
+    height: 70vh;
+    width: 100%;
+}
+.container>h3{
+   font-size: 20px;
+   font-style: italic;
+   font-weight: bold;
+   color: white;
+   text-align: center;
+}
+.container>span{
+   font-size: 15px;
+   font-style: italic;
+   font-weight: bold;
+   color: white;
+   display: inline-block;
+
+}
+.wrapper{
+    padding-left: 20px;
+    border-radius: 20px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(240, 240, 240);
+    height: 65vh;
+    width: 70%;
+    padding-left: 31px;
+    margin-left: 234px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+    border-bottom-left-radius: 183px;
+    border-top-left-radius: 87px;
+    border-top-right-radius: 151px;
+    display: inline-block;
+}
