@@ -39,6 +39,9 @@
     align-items: center;
     margin-top: 3vh;
 }
+.logo{
+    animation:mover 1s infinite alternate;;
+}
 .fa-cart-shopping{
    
 position: relative;
