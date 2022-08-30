@@ -66,3 +66,13 @@ line-height: 50px;
 cursor: pointer;
 margin-right: 5px;
 }
+
+#small:checked ~ label[for="small"],
+#medium:checked ~ label[for="medium"],
+#large:checked ~ label[for="large"],
+#x-large:checked ~ label[for="x-large"],
+#xx-large:checked ~ label[for="xx-large"]
+{
+    background: #000;
+    color: white;
+}
