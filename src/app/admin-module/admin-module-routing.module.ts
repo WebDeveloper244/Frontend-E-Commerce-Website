@@ -8,6 +8,10 @@ import { AdminModuleComponent } from './admin-module.component';
 const routes: Routes = [{ path: '', component: AdminModuleComponent,
 children:[
   {
+  path:'',
+  component:DashboardComponent
+  },
+  {
   path:'Dashboard',
   component:DashboardComponent
   },
