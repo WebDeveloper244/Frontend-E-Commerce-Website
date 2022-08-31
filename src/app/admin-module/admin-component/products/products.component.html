@@ -80,7 +80,7 @@
   <div class="col">
     <label for="">Select Categories</label>
     <select name="" id="">
-      <option value=""></option>
+      <option *ngFor="let data of categories" [value]="data">{{data}}</option>
     </select>
   </div>
 </div>
