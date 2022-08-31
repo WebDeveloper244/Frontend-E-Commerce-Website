@@ -7,10 +7,10 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
- color:any=["Red","Black","Blue"];
- sizeArray:any=["Small","Medium","Large","X-Large","XX-Large"];
+ color=["Red","Black","Blue"];
+ sizeArray=['S','M','L','XL','XXL'];
  categories=["Cap","Hoodies","Watch","Bags"];
- sizePopulateOnClick=[];
+ sizePopulateOnClick:any=[];
  myProductForm:FormGroup|any
  
 
@@ -48,10 +48,10 @@ if(event.target.checked){
 
   submitProductForm(){
 this.sizePopulateOnClick.forEach((element:string)=>{
-  let controls = new FormControl(element)
-  this.myProductForm.get('size').push(controls)
+  let controls = new FormControl(element);
+  this.myProductForm.get('size').push(controls);
 })
- let result= this.myProductForm.value
+ let result= this.myProductForm.value;
   console.log(result);
   
 
