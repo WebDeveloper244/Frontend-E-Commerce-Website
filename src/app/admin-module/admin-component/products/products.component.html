@@ -15,11 +15,11 @@
     <div class="col">
    
       <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Product Name" formControlName="productName">
+          <input type="text" class="form-control input" id="floatingInput" placeholder="Product Name" formControlName="productName">
           <label for="floatingInput">Product Name</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="numer" class="form-control" id="floatingPassword" placeholder="Product Price" formControlName="price">
+          <input type="numer" class="form-control input" id="floatingPassword" placeholder="Product Price" formControlName="price">
           <label for="floatingPassword">Product-Price</label>
         </div>
         <div class="mb-3">
@@ -32,21 +32,20 @@
   </div>
   <div class="col">
       <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="floatingInput" placeholder="Product Quantity" formControlName="">
+          <input type="number" class="form-control input" id="floatingInput" placeholder="Product Quantity" formControlName="">
           <label for="floatingInput">Product-Quantity</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingPassword" placeholder="Company-Name" formControlName="companyName">
+          <input type="text" class="form-control input" id="floatingPassword" placeholder="Company-Name" formControlName="companyName">
           <label for="floatingPassword">Company-Name</label>
         </div>
 
-        <!-- <div class="mb-3">
-          <label class="tag">Select-Size</label>
-        <select name="selectColor" class="w-100 form-control" id="" placeholder="selectSize">
-          <option *ngFor="let item of size">{{size}}</option>
-        </select>
-      </div>  -->
-<label class="tag"> Select-Size </label>
+        <label class="form-label">Select Sizes</label>
+        <span class="mb-3" *ngFor="let item of pSize">
+          <input type="checkbox" class="form-check-input" [value]="item" [id]="item">
+          <label class="form-check-label mx-2"[for]="item">{{item}}</label>
+      </span> 
+<!-- <label class="tag"> Select-Size </label>
       <div class="selectSize">
         <input type="checkbox" class="form-control" id="small"      value="small"    formArrayName="Size" formControlName="size">
         <input type="checkbox" class="form-control" id="medium"     value="medium"   formArrayName="Size" formControlName="size">
@@ -58,7 +57,7 @@
         <Label for="large">L</Label>
         <Label for="x-large">X-L</Label>
         <Label for="xx-large">XX-L</Label>
-      </div>
+      </div> -->
 
   </div>
 
@@ -72,14 +71,14 @@
   <div class="col">
 
 <div class="mb-3">
-  <label for="formFile" class="form-label">Select Images</label>
+  <label for="formFile" class="form-label input">Select Images</label>
   <input class="form-control" type="file" id="formFile" formControlName="image" multiple>
 </div>
 
   </div>
   <div class="col">
     <label for="">Select Categories</label>
-    <select class="form-select" formControlName="category">
+    <select class="form-select input" formControlName="category">
       <option *ngFor="let data of categories" [value]="data">{{data}}</option>
     </select>
   </div>

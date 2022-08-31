@@ -44,11 +44,11 @@
     border-top-right-radius: 151px;
     
 }
-input{
+.input{
     width: 85%;
     border-radius: 0%; 
 }
-input:focus{
+.input:focus{
     box-shadow: none; 
     border: 1px solid black;
 }

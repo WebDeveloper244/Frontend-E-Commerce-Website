@@ -8,15 +8,15 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ProductsComponent implements OnInit {
  color:any=["Red","Black","Blue"];
- size:any=["Small","Medium","Large","X-Large","XX-Large"];
+ pSize=["Small","Medium","Large","X-Large","XX-Large"];
  categories=["Cap","Hoodies","Watch","Bags"]
 
  myProductForm:FormGroup|any
-  result: any;
+
 
   constructor(
     private formBuilder:FormBuilder
-  ) { }
+  ) { this.buildForm()}
 
   ngOnInit(): void {
   }
@@ -29,7 +29,7 @@ export class ProductsComponent implements OnInit {
       description: ['', Validators.required],
       color: ['',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]],
       companyName: ['',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]],
-      logoMaterial: ['',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]],
+      // logoMaterial: ['',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]],
       category: ['', Validators.required],
       size: new FormArray([]),
       productMaterial:['',Validators.required],
@@ -38,8 +38,8 @@ export class ProductsComponent implements OnInit {
   }
 
   submitProductForm(){
-  this.result=this.myProductForm.value
-  console.log(this.result);
+ let result= this.myProductForm.value
+  console.log(result);
   
   }
 
