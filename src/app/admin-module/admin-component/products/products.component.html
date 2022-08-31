@@ -40,11 +40,22 @@
           <label for="floatingPassword">Company-Name</label>
         </div>
 
-        <label class="form-label">Select Sizes</label>
-        <span class="mb-3" *ngFor="let item of pSize">
-          <input type="checkbox" class="form-check-input" [value]="item" [id]="item">
+        <!-- <label class="form-label">Select Sizes</label>
+        <ng-container class="mb-3" *ngFor="let item of sizeArray">
+          <input type="checkbox" class="form-check-input" [value]="item" [id]="item" (click)="getSize($event)">
           <label class="form-check-label mx-2"[for]="item">{{item}}</label>
-      </span> 
+      </ng-container>  -->
+
+      <div class="mb-3">
+        <label class="form-label">Select Sizes</label><br>
+        <ng-container *ngFor="let data of sizeArray">
+          <input class="form-check-input" type="checkbox" [value]="data" [id]="data" (click)="getSize($event)">
+          <label class="form-check-label mx-2" [for]="data">
+            {{data}}
+          </label>
+        </ng-container>
+      </div>
+
 <!-- <label class="tag"> Select-Size </label>
       <div class="selectSize">
         <input type="checkbox" class="form-control" id="small"      value="small"    formArrayName="Size" formControlName="size">

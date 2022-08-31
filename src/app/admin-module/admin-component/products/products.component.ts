@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-products',
@@ -8,10 +8,11 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ProductsComponent implements OnInit {
  color:any=["Red","Black","Blue"];
- pSize=["Small","Medium","Large","X-Large","XX-Large"];
- categories=["Cap","Hoodies","Watch","Bags"]
-
+ sizeArray:any=["Small","Medium","Large","X-Large","XX-Large"];
+ categories=["Cap","Hoodies","Watch","Bags"];
+ sizePopulateOnClick=[];
  myProductForm:FormGroup|any
+ 
 
 
   constructor(
@@ -36,10 +37,25 @@ export class ProductsComponent implements OnInit {
       image: new FormArray([])
     })
   }
+getSize(event:any){
+if(event.target.checked){
+  this.sizePopulateOnClick.push(event.target.value)
+}else{
+  this.sizePopulateOnClick = this.sizePopulateOnClick.filter((value:any)=>value != event.target.value);
+}
+}
+
 
   submitProductForm(){
+this.sizePopulateOnClick.forEach((element:string)=>{
+  let controls = new FormControl(element)
+  this.myProductForm.get('size').push(controls)
+})
  let result= this.myProductForm.value
   console.log(result);
+  
+
+
   
   }
 
