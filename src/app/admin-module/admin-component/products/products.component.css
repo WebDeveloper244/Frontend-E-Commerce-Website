@@ -52,6 +52,21 @@ input:focus{
     box-shadow: none; 
     border: 1px solid black;
 }
+.selectColor{
+    width: 85%;
+    border-radius: 0%; 
+}
+.selectColor:focus{
+box-shadow: none;
+border: 1px solid black;
+}
+textarea{
+    width: 95%;
+}
+textarea:focus-visible {
+    box-shadow: none;
+    border: 1px solid black;
+}
 .tag{
     font-size: 14px;
    font-weight: bold;
@@ -81,6 +96,4 @@ margin-right: 5px;
     background: #000;
     color: white;
 }
-textarea{
-    width: 95%;
-}
+

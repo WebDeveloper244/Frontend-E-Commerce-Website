@@ -39,10 +39,11 @@ ul>li>a:hover {
   .sidebar{
     /* background: #0800ff; */
       background-image: linear-gradient(to bottom right, rgb(0, 0, 0),rgb(14, 52, 136));
-      position:sticky;
-      top: 0%;
-      bottom: 0%;
-      height: 100%;
+      position: fixed;
+       
+       height: 100%;
+      
+     
      
       
      
