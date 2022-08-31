@@ -6,6 +6,7 @@ import { AdminModuleComponent } from './admin-module.component';
 import { DashboardComponent } from './admin-component/dashboard/dashboard.component';
 import { ProductsComponent } from './admin-component/products/products.component';
 import { NewReleaseComponent } from './admin-component/new-release/new-release.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,6 +19,8 @@ import { NewReleaseComponent } from './admin-component/new-release/new-release.c
   imports: [
     CommonModule,
     AdminModuleRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ]
 })
