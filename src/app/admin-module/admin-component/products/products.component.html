@@ -36,8 +36,8 @@
           <label for="floatingInput">Product-Quantity</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingPassword" placeholder="Product categorie">
-          <label for="floatingPassword">Product-Categorie</label>
+          <input type="text" class="form-control" id="floatingPassword" placeholder="Company-Name">
+          <label for="floatingPassword">Company-Name</label>
         </div>
 
         <!-- <div class="mb-3">
@@ -79,10 +79,13 @@
   </div>
   <div class="col">
     <label for="">Select Categories</label>
-    <select name="" id="">
+    <select class="form-select" >
       <option *ngFor="let data of categories" [value]="data">{{data}}</option>
     </select>
   </div>
+</div>
+<div class="row">
+  <button type="submit" class="btn btn-outline-dark w-100">Submit</button>
 </div>
 </form>
 
