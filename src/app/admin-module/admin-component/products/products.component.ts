@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { TitleStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -8,13 +9,13 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
 })
 export class ProductsComponent implements OnInit {
  color=["Red","Black","Blue"];
- sizeArray=['S','M','L','XL','XXL'];
  categories=["Cap","Hoodies","Watch","Bags"];
- sizePopulateOnClick:any=[];
- myProductForm:FormGroup|any
+ selectSize=["S","M","L","X-L","XX-L"];
+ newSizeArray:any=[]
+ 
  
 
-
+ myProductForm:FormGroup|any
   constructor(
     private formBuilder:FormBuilder
   ) { this.buildForm()}
@@ -37,20 +38,23 @@ export class ProductsComponent implements OnInit {
       image: new FormArray([])
     })
   }
-getSize(event:any){
-if(event.target.checked){
-  this.sizePopulateOnClick.push(event.target.value)
-}else{
-  this.sizePopulateOnClick = this.sizePopulateOnClick.filter((value:any)=>value != event.target.value);
-}
-}
+  getSize(event:any){
+    if(event.target.checked){
+     this.newSizeArray.push(event.target.value)
+    }
+    else{
+     this.newSizeArray = this.newSizeArray.filter((value:any)=>value != event.target.value)
+    }
+  }
+  
 
 
-  submitProductForm(){
-this.sizePopulateOnClick.forEach((element:string)=>{
-  let controls = new FormControl(element);
-  this.myProductForm.get('size').push(controls);
-})
+ submitProductForm(){
+  // console.log(this.ProductForm.get('companyName').setValue('Rameen is the new hacker of the class')); Gettter and Sstter (it get and set the value any Object(productForm))
+  this.newSizeArray.forEach((elements:string)=>{
+   let formControl = new FormControl(elements)
+   this.myProductForm.get("size").push(formControl)
+  })
  let result= this.myProductForm.value;
   console.log(result);
   
