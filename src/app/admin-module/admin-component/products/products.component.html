@@ -4,7 +4,7 @@
    <div class="txt text-center">
     <h3>Welcome To Create Product</h3>
     <h4>You can create your product card and can live on your pages </h4>
-   <button type="button" class="btn btn-outline-dark w-50 text-white mt-3">Primary</button>
+   <button type="button" class="btn btn-outline-dark w-50 text-white mt-3">Create Product</button>
    </div>
   </div>
   <div class="col-md-9">
@@ -41,7 +41,7 @@
         </div>
 
         
-         <label for="">Select Size</label>
+         <label for="" class="tag">Select Size</label>
         <div class="mb-3">
           <ng-container *ngFor="let item of selectSize" >
           <input type="checkbox" class="form-check-input" [value]="item" [id]="item" (click)="getSize($event)"/>
@@ -51,15 +51,6 @@
         </ng-container>
         </div>
           
-        <!-- <div class="mb-3">
-          <label class="form-label">Select Sizes</label><br>
-          <ng-container *ngFor="let data of selectSize">
-            <input class="form-check-input" type="checkbox" [value]="data" [id]="data">
-            <label class="form-check-label mx-2" [for]="data">
-              {{data}}
-            </label>
-          </ng-container>
-        </div> -->
      
 
 <!-- <label class="tag"> Select-Size </label>
@@ -88,20 +79,20 @@
   <div class="col">
 
 <div class="mb-3">
-  <label for="formFile" class="form-label input">Select Images</label>
-  <input class="form-control" type="file" id="formFile" formControlName="image" multiple>
+  <label for="formFile" class="form-label tag">Select Images</label>
+  <input class="form-control input" type="file" id="formFile" formControlName="image" multiple>
 </div>
 
   </div>
   <div class="col">
-    <label for="">Select Categories</label>
+    <label for="" class="tag mb-2">Select Categories</label>
     <select class="form-select input" formControlName="category">
       <option *ngFor="let data of categories" [value]="data">{{data}}</option>
     </select>
   </div>
 </div>
 <div class="row">
-  <button type="submit" class="btn btn-outline-dark w-100">Submit</button>
+  <button type="submit" class="btn button">Submit</button>
 </div>
 </form>
 
