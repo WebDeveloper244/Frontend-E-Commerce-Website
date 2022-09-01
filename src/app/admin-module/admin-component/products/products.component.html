@@ -51,21 +51,6 @@
         </ng-container>
         </div>
           
-     
-
-<!-- <label class="tag"> Select-Size </label>
-      <div class="selectSize">
-        <input type="checkbox" class="form-control" id="small"      value="small"    formArrayName="Size" formControlName="size">
-        <input type="checkbox" class="form-control" id="medium"     value="medium"   formArrayName="Size" formControlName="size">
-        <input type="checkbox" class="form-control" id="large"      value="large"    formArrayName="Size" formControlName="size">
-        <input type="checkbox" class="form-control" id="x-large"    value="x-large"  formArrayName="Size" formControlName="size">
-        <input type="checkbox" class="form-control" id="xx-large"   value="xx-large" formArrayName="Size" formControlName="size">
-        <Label for="small">S</Label>
-        <Label for="medium">M</Label>
-        <Label for="large">L</Label>
-        <Label for="x-large">X-L</Label>
-        <Label for="xx-large">XX-L</Label>
-      </div> -->
 
   </div>
 
@@ -80,7 +65,7 @@
 
 <div class="mb-3">
   <label for="formFile" class="form-label tag">Select Images</label>
-  <input class="form-control input" type="file" id="formFile" formControlName="image" multiple>
+  <input class="form-control input" type="file" id="formFile" formControlName="image" multiple (change)="getImages($event)" >
 </div>
 
   </div>
@@ -92,7 +77,7 @@
   </div>
 </div>
 <div class="row">
-  <button type="submit" class="btn button">Submit</button>
+  <button type="submit" class="btn button" [ngStyle]="{'border-color': disableButtonTrue ? 'red' : 'black'}"  [disabled]="disableButtonTrue" >Submit</button>
 </div>
 </form>
 
@@ -106,3 +91,19 @@
 
 
 
+
+<!-- <label class="tag"> Select-Size </label>
+      <div class="selectSize">
+        <ng-container *ngFor="let item of selectSize">
+        <input type="checkbox" class="form-control" [id]="item"      [value]="item"     (click)="getSize($event)">
+        <input type="checkbox" class="form-control" id="medium"     value="medium"   formArrayName="Size" formControlName="size">
+        <input type="checkbox" class="form-control" id="large"      value="large"    formArrayName="Size" formControlName="size">
+        <input type="checkbox" class="form-control" id="x-large"    value="x-large"  formArrayName="Size" formControlName="size">
+        <input type="checkbox" class="form-control" id="xx-large"   value="xx-large" formArrayName="Size" formControlName="size">
+        <Label [for]="item">{{item}}</Label> 
+        <Label for="medium">M</Label>
+        <Label for="large">L</Label>
+        <Label for="x-large">X-L</Label>
+        <Label for="xx-large">XX-L</Label>
+      </ng-container>
+      </div> -->
