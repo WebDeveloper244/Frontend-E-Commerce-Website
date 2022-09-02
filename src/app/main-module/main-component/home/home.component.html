@@ -12,15 +12,55 @@
       </div>
     </div>
     </div>
+
+
+    <!----------------------------------------------------------- over-view-section ----------------------------------------->
+    <!-- <section class="section section-default mt-none mb-none section-services">
+      <h2 class="text-center">
+        Our <strong>Services</strong>
+     </h2>
+      <div class="container">
+        
+         <div class="row">
+            <div class="col-md-6">
+               <div class="service-block-container">
+                  <div class="service-block">
+                     <div class="service-underlay">
+                        <span class="service-name">
+    Web Applications
+    </span>
+                        <a class="cta" href="/services/web-applications">Learn More</a>
+                     </div>
+                     <span class="service-icon">
+    <em class="fa fa-code"></em>
+    </span>
+                     <span class="service-desc">
+    Bespoke web applications for end to end solutions
+    </span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-md-6">
+             <div class="mt-5">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci velit expedita vitae culpa ad odio labore optio, illum iste recusandae nesciunt aliquid animi, eligendi, sequi nisi eaque pariatur cumque voluptate amet. Perferendis.
+             </div>
+            </div>
+            
+         </div>
+      </div>
+    </section> -->
+
     
-<!----------------------------------------------------------- Featured-Products-Section ----------------------------------------->
+    
+<!----------------------------------------------------------- Latest-Products-Section ----------------------------------------->
 <h1 class="text-center product-heading">Latest-Products</h1>
 
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of DataComeFromJson">
       <!-- flip-card-container -->
-<div class="flip-card-container" style="--hue: 220" *ngIf="item.productCategorie === 'Latest'">
+<div class="flip-card-container cardBox" style="--hue: 220" *ngIf="item.productCategorie === 'Latest'">
   <div class="flip-card">
 
     <div class="card-front">
@@ -78,15 +118,15 @@
   </div>
 </div>
 
-<!----------------------------------------------------------- Latest-Products-Section ----------------------------------------->
-<h1 class="text-center product-heading">Featured-Products</h1>
+<!----------------------------------------------------------- All-Products-Section ----------------------------------------->
+<h1 class="text-center product-heading">All-Products</h1>
 
 
-<div class="container mb-5">
+<div class="container-fluid mb-5">
   <div class="row">
-    <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of DataComeFromJson">
+    <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of DataComeFromJson">
       <!-- flip-card-container -->
-<div class="flip-card-container" style="--hue: 220">
+<div class="flip-card-container cardBox2" style="--hue: 220">
   <div class="flip-card">
 
     <div class="card-front">
@@ -145,7 +185,7 @@
 </div>
 
 <!----------------------------------------------------------- Sale-section ----------------------------------------->
-<div class="bgImg">
+<!-- <div class="bgImg">
   <div class="container">
     <div class="row">
       <div class="col text-center">
@@ -153,16 +193,113 @@
         <h1 class="countdown">
          <span>7:08:60</span> 
         </h1>
-       
-          <!-- HTML !-->
 <button class="button-57" role="button"><span class="text">Shop</span><span>Now</span></button>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 <!----------------------------------------------------------- Carosel-section ----------------------------------------->
 
+
+<!----------------------------------------------------------- over-view-section ----------------------------------------->
+
+<div class="bgimg1">
+   <section class="section section-default mt-none mb-none section-services">
+      <h2 class="text-center text-white py-5">
+        Our <strong>Services</strong>
+     </h2>
+      <div class="container">
+        
+         <div class="row">
+            <div class="col-md-4">
+               <div class="service-block-container">
+                  <div class="service-block">
+                     <div class="service-underlay">
+                        <span class="service-name">
+   Waranty
+    </span>
+                        <a class="cta">Learn More</a>
+                     </div>
+                     <span class="service-icon">
+                      <i class="fa-solid fa-shield-halved"></i>
+    </span>
+                     <span class="service-desc">
+    We Give Garantee Of Waranty
+    </span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-md-8">
+             <div class="mt-5 text-white s1">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci velit expedita vitae culpa ad odio labore optio, illum iste recusandae nesciunt aliquid animi, eligendi, sequi nisi eaque pariatur cumque voluptate amet. Perferendis. adipisicing elit. Adipisci velit expedita vitae culpa ad odio labore optio, illum iste recusandae nesciunt aliquid animi, eligendi, sequi nisi eaque pariatur cumque voluptate amet. Perferendis.
+             </div>
+            </div>
+            
+         </div>
+
+            <!------------------------------------------------------------------- Row-2 -->
+
+         <div class="row mt-5">
+          <div class="col-md-8">
+            <div class="mt-5 text-white s2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci velit expedita vitae culpa ad odio labore optio, illum iste recusandae nesciunt aliquid animi, eligendi, sequi nisi eaque pariatur cumque voluptate amet. Perferendis. adipisicing elit. Adipisci velit expedita vitae culpa ad odio labore optio, illum iste recusandae nesciunt aliquid animi, eligendi, sequi nisi eaque pariatur cumque voluptate amet. Perferendis.
+             </div>
+          </div>
+          <div class="col-md-4">
+              <div class="service-block-container">
+                 <div class="service-block">
+                    <div class="service-underlay">
+                       <span class="service-name">
+   Free-Delivery
+   </span>
+                       <a class="cta" >Learn More</a>
+                    </div>
+                    <span class="service-icon">
+   <em class="fa fa-barcode"></em>
+   </span>
+                    <span class="service-desc">
+   World leading enterprise Delivery
+   </span>
+                 </div>
+              </div>
+           
+          </div>
+         </div>
+                    <!------------------------------------------------------------------- Row-3 -->
+         <div class="row mt-5">
+          <div class="col-md-4">
+              <div class="service-block-container">
+                 <div class="service-block">
+                    <div class="service-underlay">
+                       <span class="service-name">
+   Support
+   </span>
+                       <a class="cta">Learn More</a>
+                    </div>
+                    <span class="service-icon">
+   <em class="fa fa-gbp"></em>
+   </span>
+                    <span class="service-desc">
+   We Give 24/7 Support Our Coustomers
+   </span>
+                 </div>
+              </div>
+           
+          </div>
+          <div class="col-md-8">
+
+              <div class="mt-5 text-white s3">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci velit expedita vitae culpa ad odio labore optio, illum iste recusandae nesciunt aliquid animi, eligendi, sequi nisi eaque pariatur cumque voluptate amet. Perferendis. adipisicing elit. Adipisci velit expedita vitae culpa ad odio labore optio, illum iste recusandae nesciunt aliquid animi, eligendi, sequi nisi eaque pariatur cumque voluptate amet. Perferendis.
+               </div>
+           
+          </div>
+         </div>
+
+      </div>
+    </section>
+</div>
 
 <!----------------------------------------------------------- over-view-section ----------------------------------------->

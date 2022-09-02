@@ -97,6 +97,40 @@
       "newQuantity":0,
       "productPrice": 50000
      
+    },
+    {
+      "id": 7,
+      "Name": "Mens-Wallet",
+      "image": [
+        "https://images.unsplash.com/photo-1587424279915-db56f37265f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODN8fHdhbGxldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        "https://images.unsplash.com/photo-1603313011186-4711e7f8e477?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+        "https://images.unsplash.com/photo-1620109433606-a7dfa6107d28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+        "https://images.unsplash.com/photo-1620109433753-a62f2c961b69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+        
+      ],
+      
+      "title": "Best Leather Wallet",
+      "qty": 3,
+      "newQuantity":0,
+      "productPrice": 40000
+     
+    },
+    {
+      "id": 8,
+      "Name": "Sun-Glasses",
+      "image": [
+        "https://images.unsplash.com/photo-1626226147500-5728057feb67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHN1bmdsYXNzZXN8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        "https://images.unsplash.com/photo-1626226147506-1d5e18cd4657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHN1bmdsYXNzZXN8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        "https://images.unsplash.com/photo-1626226147633-d3783164bd01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHN1bmdsYXNzZXN8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+       
+        
+      ],
+      
+      "title": "Best Brand Sun-Glasess",
+      "qty": 12,
+      "newQuantity":0,
+      "productPrice": 40000
+     
     }
     
   ]
