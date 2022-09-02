@@ -39,9 +39,7 @@
     align-items: center;
     margin-top: 3vh;
 }
-.logo{
-    animation:mover 1s infinite alternate;;
-}
+
 .fa-cart-shopping{
    
 position: relative;
@@ -144,6 +142,12 @@ top: 19px;
 right: 15px;
 font-size: 1.5rem;
     }
+    .logoimg{
+        /* animation:mover 1s infinite alternate; */
+        height: 62px;
+        width: 62px;
+        margin-top: -26px;
+    }
 
     .navbar-container{
         display: block;
@@ -174,6 +178,7 @@ font-size: 1.5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-top: -9px;
     }
 
     .navbar-container .hamburger-lines .line{
@@ -182,6 +187,7 @@ font-size: 1.5rem;
         width: 100%;
         border-radius: 10px;
         background: rgb(157, 11, 11);
+        
     }
     
     .navbar-container .hamburger-lines .line1{
@@ -209,8 +215,9 @@ font-size: 1.5rem;
         margin-left: -40px;
         padding-left: 40px;
         transition: transform 0.5s ease-in-out;
-        box-shadow:  5px 0px 10px 0px #aaa;
+        /* box-shadow:  5px 0px 10px 0px #aaa; */
         overflow: scroll;
+        margin-top: -20px;
     }
     ul>li>a{
         color: rgb(255, 255, 255);
@@ -260,3 +267,5 @@ right: 15px;
 font-size: 1.5rem;
     }
 }
+
+

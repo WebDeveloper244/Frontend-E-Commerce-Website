@@ -158,6 +158,11 @@
      opacity: 1;
      transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
    }
+   @media (max-width: 352px){
+    .button-58 {
+      width: 38%;
+    }
+  }
 
 
    /************************** Products-Section ***************************************/
@@ -245,6 +250,21 @@ body {
 @media (max-width: 371px){
   .flip-card-container {
     margin-left: -5px;
+  }
+}
+@media (max-width: 352px){
+  .flip-card-container {
+    margin-left: -14px;
+  }
+}
+@media (max-width: 336px){
+  .flip-card-container {
+    margin-left: -21px;
+  }
+}
+@media (max-width: 322px){
+  .flip-card-container {
+    margin-left: -26px;
   }
 }
 
