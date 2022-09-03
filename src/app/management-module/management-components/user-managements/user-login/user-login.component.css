@@ -190,10 +190,10 @@
       width: 36%;
     }
   }
-  @media (max-width: 1288px){
+  @media (max-width: 1110px){
     .login-box {
       height: 51%;
-      width: 34%;
+      width: 339%;
     }
   }
   @media (max-width: 1288px){
