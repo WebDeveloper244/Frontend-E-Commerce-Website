@@ -184,4 +184,22 @@
       width: 34%;
     }
   }
+  @media (max-width: 1150px){
+    .login-box {
+      height: 51%;
+      width: 36%;
+    }
+  }
+  @media (max-width: 1288px){
+    .login-box {
+      height: 51%;
+      width: 34%;
+    }
+  }
+  @media (max-width: 1288px){
+    .login-box {
+      height: 51%;
+      width: 34%;
+    }
+  }
   
