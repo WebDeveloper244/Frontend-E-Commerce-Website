@@ -166,10 +166,22 @@
       bottom: 100%;
     }
   }
-  @media (max-width: 1933px){
+  @media (max-width: 1660px){
     .login-box {
-      height: 50%;
-      width: 23%;
+      height: 51%;
+      width: 26%;
+    }
+  }
+  @media (max-width: 1447px){
+    .login-box {
+      height: 51%;
+      width: 30%;
+    }
+  }
+  @media (max-width: 1660px){
+    .login-box {
+      height: 51%;
+      width: 30%;
     }
   }
   
