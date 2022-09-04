@@ -556,7 +556,7 @@ li:not(:last-child)::after {
 }
 .InStock{
   color: #0271ff;
-  text-shadow: 2px 2px 4px #000304;
+  text-shadow: 2px 2px 4px #000000;
   
 }
 .OutStock{
@@ -566,6 +566,10 @@ text-shadow: 2px 2px 4px red;
 .green{
   color: greenyellow;
   text-shadow: 2px 2px 4px #c1f503;
+}
+.white{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 .color{
   /* color: greenyellow;
