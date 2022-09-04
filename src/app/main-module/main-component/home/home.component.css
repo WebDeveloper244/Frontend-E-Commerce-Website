@@ -561,8 +561,10 @@ li:not(:last-child)::after {
   
 }
 .color{
-  color: greenyellow;
-  text-shadow: 2px 2px 4px #c1f503;
+  /* color: greenyellow;
+  text-shadow: 2px 2px 4px #c1f503; */
+  color: #0271ff;
+  text-shadow: 2px 2px 4px #000304;
 }
 
 /* button */
