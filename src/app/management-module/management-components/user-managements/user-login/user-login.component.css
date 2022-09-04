@@ -166,6 +166,7 @@
       bottom: 100%;
     }
   }
+
   @media (max-width: 1660px){
     .login-box {
       height: 51%;

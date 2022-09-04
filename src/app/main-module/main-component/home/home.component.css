@@ -188,6 +188,7 @@
 */
 
 /* Hover over a card to flip, can tab too. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Ultra&display=swap');
 
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
@@ -536,7 +537,8 @@ li {
 
 li:nth-child(2n) {
   color: var(--white-2);
-  font-family: 'Noto Serif', serif;
+  /* font-family: 'Noto Serif', serif; */
+ 
 }
 
 li:not(:last-child)::after {
@@ -551,6 +553,16 @@ li:not(:last-child)::after {
 
   background: currentColor;
   opacity: .2;
+}
+.InStock{
+  text-shadow: 2px 2px 4px #12269c;
+  font-family: 'Passion One', cursive;
+  font-size: 26px;
+  
+}
+.color{
+  color: greenyellow;
+  text-shadow: 2px 2px 4px #c1f503;
 }
 
 /* button */
