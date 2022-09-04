@@ -13,6 +13,7 @@
        font-size: 50px;
        margin-top: 10vh;
        font-weight: 900;
+       font-family: 'Trocchi', serif;
    }
    .banner-header h3{
      font-size: 20px;
@@ -866,6 +867,10 @@ z-index: 1;
 .service-block-container {
   display: flex;
   justify-content: center;
+}
+
+.section-default>h2{
+  font-family: 'Trocchi', serif;
 }
 
 .service-block {
