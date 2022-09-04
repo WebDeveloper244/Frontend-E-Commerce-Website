@@ -555,16 +555,26 @@ li:not(:last-child)::after {
   opacity: .2;
 }
 .InStock{
-  text-shadow: 2px 2px 4px #12269c;
-  font-family: 'Passion One', cursive;
-  font-size: 26px;
+  color: #0271ff;
+  text-shadow: 2px 2px 4px #000304;
   
+}
+.OutStock{
+color: red;
+text-shadow: 2px 2px 4px red;
+}
+.green{
+  color: greenyellow;
+  text-shadow: 2px 2px 4px #c1f503;
 }
 .color{
   /* color: greenyellow;
   text-shadow: 2px 2px 4px #c1f503; */
-  color: #0271ff;
-  text-shadow: 2px 2px 4px #000304;
+
+
+  /* text-shadow: 2px 2px 4px #12269c; */
+  font-family: 'Passion One', cursive;
+  font-size: 26px;
 }
 
 /* button */
