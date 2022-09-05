@@ -11,5 +11,7 @@ export class UserLoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  submitUserLoginForm(){
+    
+  }
 }
