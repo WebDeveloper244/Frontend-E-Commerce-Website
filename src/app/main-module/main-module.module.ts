@@ -15,6 +15,7 @@ import { WildCardComponent } from './main-component/wild-card/wild-card.componen
 import { EditCardComponent } from './main-component/edit-card/edit-card.component';
 import { PurchaseSuccessfullComponent } from './main-component/purchase-successfull/purchase-successfull.component';
 import { PurchaseFailedComponent } from './main-component/purchase-failed/purchase-failed.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -37,6 +38,7 @@ import { PurchaseFailedComponent } from './main-component/purchase-failed/purcha
   imports: [
     CommonModule,
     MainModuleRoutingModule,
+    FormsModule
     
   ]
 })
