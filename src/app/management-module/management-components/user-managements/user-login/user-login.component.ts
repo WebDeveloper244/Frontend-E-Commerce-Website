@@ -17,7 +17,7 @@ export class UserLoginComponent implements OnInit {
   }
 userLoginFormModel(){
   this.userLoginForm = this.formBuilder.group({
-   Name: new FormControl(['',Validators.required]),
+   Name: new FormControl(['',Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
    Password: new FormControl(['',Validators.required]),
   })
 }
