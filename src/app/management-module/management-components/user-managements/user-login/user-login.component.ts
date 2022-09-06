@@ -11,7 +11,9 @@ export class UserLoginComponent implements OnInit {
   userLoginForm:any|FormGroup
   constructor(
     private formBuilder:FormBuilder
-  ) { }
+  ) { 
+    this.userLoginFormModel();
+  }
 
   ngOnInit(): void {
   }
@@ -23,6 +25,8 @@ userLoginFormModel(){
 }
 
   submitUserLoginForm(){
+    this.userLoginForm.value
+    console.log(this.userLoginForm.value);
     
   }
 }
