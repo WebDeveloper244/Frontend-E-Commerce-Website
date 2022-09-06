@@ -3,11 +3,16 @@
         <h2>Login</h2>
         <form (ngSubmit)="submitUserLoginForm()" [formGroup]="userLoginForm">
           <div class="user-box">
-            <input type="text" name="" required="">
+            <input type="text" name="" required="" formControlName="userName">
             <label>Username</label>
+
+            <div class="text-danger" >
+               
+            </div>
+
           </div>
           <div class="user-box">
-            <input type="password" name="" required="" autocomplete="off">
+            <input type="password" name="" required="" autocomplete="off" formControlName="userPassword">
             <label>Password</label>
           </div>
           <div>
