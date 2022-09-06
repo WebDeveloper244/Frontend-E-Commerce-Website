@@ -15,6 +15,12 @@ export class UserLoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+userLoginFormModel(){
+  this.userLoginForm = this.formBuilder.group({
+    
+  })
+}
+
   submitUserLoginForm(){
     
   }

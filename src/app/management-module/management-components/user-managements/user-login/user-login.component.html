@@ -1,7 +1,7 @@
 <body>
     <div class="login-box">
         <h2>Login</h2>
-        <form (ngSubmit)="submitUserLoginForm()" formGroup="userLoginForm">
+        <form (ngSubmit)="submitUserLoginForm()" [formGroup]="userLoginForm">
           <div class="user-box">
             <input type="text" name="" required="">
             <label>Username</label>
