@@ -3,19 +3,26 @@
         <h2>Login</h2>
         <form (ngSubmit)="submitUserLoginForm()" [formGroup]="userLoginForm">
           <div class="user-box">
-            <input type="text" name="" required="" formControlName="userName">
+            <input type="text" name=""  formControlName="userName">
             <label>Username</label>
 
-            <div class="text-danger" >
+             <!---------------------------------------------- Form-Validation ---------------------------------------------->
+            <!-- <div class="error text-danger" 
+            *ngIf="userLoginForm.controls['userName'].invalid && userLoginForm.controls['userName'].dirty || userLoginForm.controls['userName'].touched">
                
-            </div>
+            </div> -->
+              <!---------------------------------------------- Form-Validation ---------------------------------------------->
 
           </div>
           <div class="user-box">
-            <input type="password" name="" required="" autocomplete="off" formControlName="userPassword">
+            <input type="password" name=""  autocomplete="off" formControlName="userPassword">
             <label>Password</label>
-          </div>
-          <div>
+
+            <!---------------------------------------------- Form-Validation ---------------------------------------------->
+          <!-- <div *ngIf="userLoginForm()"> 
+          </div> -->
+            <!---------------------------------------------- Form-Validation ---------------------------------------------->
+
             <small class="text-white">If you are not Register? go to <a routerLink="/Management-Module/user-register">Register</a></small>
         </div>
           <a type="submit" class="btn">
