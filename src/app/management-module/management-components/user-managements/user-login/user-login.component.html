@@ -3,19 +3,32 @@
         <h2>Login</h2>
         <form (ngSubmit)="submitUserLoginForm()" [formGroup]="userLoginForm">
           <div class="user-box">
-            <input type="text" name=""  formControlName="userName">
+            <input type="text" name="" required=""  formControlName="userName">
+               
             <label>Username</label>
 
-             <!---------------------------------------------- Form-Validation ---------------------------------------------->
-            <!-- <div class="error text-danger" 
-            *ngIf="userLoginForm.controls['userName'].invalid && userLoginForm.controls['userName'].dirty || userLoginForm.controls['userName'].touched">
-               
-            </div> -->
-              <!---------------------------------------------- Form-Validation ---------------------------------------------->
+<!---------------------------------------------- Form-Validation ---------------------------------------------->
+<div class="error text-danger"
+ *ngIf="userLoginForm.controls['userName'].invalid && (userLoginForm.controls['userName'].dirty || userLoginForm.controls['userName'].touched)">
+     
+    <span *ngIf="userLoginForm.controls['userName'].errors.minlength || userLoginForm.controls['userName'].errors.maxlength">
+       <small>Name between 4 to 20 Characters!</small>
+    </span>
+
+    <span *ngIf="userLoginForm.controls['userName'].errors.pattern">
+      <small>Only Characters and Spaces allowed!</small>
+   </span>
+
+   <span *ngIf="userLoginForm.controls['userName'].errors.required">
+    <small>Field Required!</small>
+ </span>
+
+</div>
+  <!---------------------------------------------- Form-Validation ---------------------------------------------->          
 
           </div>
-          <div class="user-box">
-            <input type="password" name=""  autocomplete="off" formControlName="userPassword">
+          <div class="user-box mt-2">
+            <input type="password" name="" required=""  autocomplete="off" formControlName="userPassword">
             <label>Password</label>
 
             <!---------------------------------------------- Form-Validation ---------------------------------------------->

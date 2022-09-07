@@ -19,8 +19,8 @@ export class UserLoginComponent implements OnInit {
   }
 userLoginFormModel(){
   this.userLoginForm = this.formBuilder.group({
-   userName: new FormControl(['',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]]),
-   userPassword: new FormControl(['',[Validators.required]])
+   userName: new FormControl('',[Validators.required,Validators.minLength(4),Validators.maxLength(20),Validators.pattern(/^[A-Za-z\s]*$/)]),
+   userPassword: new FormControl('',[Validators.required])
   })
 }
 
@@ -29,4 +29,4 @@ userLoginFormModel(){
     // console.log(this.userLoginForm.value);
     
   }
-}
+}(/^[a-zA-Z\s]*$/g)
