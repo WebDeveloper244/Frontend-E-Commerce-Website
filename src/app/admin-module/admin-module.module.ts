@@ -7,6 +7,7 @@ import { DashboardComponent } from './admin-component/dashboard/dashboard.compon
 import { ProductsComponent } from './admin-component/products/products.component';
 import { NewReleaseComponent } from './admin-component/new-release/new-release.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductAnalyticsComponent } from './admin-component/product-analytics/product-analytics.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AdminModuleComponent,
     DashboardComponent,
     ProductsComponent,
-    NewReleaseComponent
+    NewReleaseComponent,
+    ProductAnalyticsComponent
   ],
   imports: [
     CommonModule,
