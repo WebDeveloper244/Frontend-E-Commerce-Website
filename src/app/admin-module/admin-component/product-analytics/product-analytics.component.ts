@@ -10,9 +10,14 @@ export class ProductAnalyticsComponent implements OnInit {
 dataComefromJson:any=[];
   constructor(
     private jsonDataService:JsonDataService
-  ) { }
+  ) {
+    this.allProducts()
+   }
 
   ngOnInit(): void {
+    
+  }
+  allProducts(){
     this.dataComefromJson = this.jsonDataService.getjsonData()
   }
 
