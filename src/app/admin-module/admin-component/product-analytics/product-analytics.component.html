@@ -1,8 +1,8 @@
 
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <table class="table">
+    <div class="row" *ngFor="let item of dataComefromJson let index">
+        <div class="col" >
+            <table class="table"  >
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -15,10 +15,13 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row">{{index}}</th>
+                    <td>{{item.Name}}</td>
+                    <td>{{item}}</td>
+                    <td>{{item}}</td>
+                    <td>{{item}}</td>
+                    <td>{{item}}</td>
+                    <td>{{item}}</td>
                   </tr>
                 </tbody>
               </table>
