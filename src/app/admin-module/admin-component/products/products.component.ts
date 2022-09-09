@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -17,7 +18,8 @@ export class ProductsComponent implements OnInit {
 
  myProductForm:FormGroup|any
   constructor(
-    private formBuilder:FormBuilder
+    private formBuilder:FormBuilder,
+    private toastr: ToastrService
   ) { this.buildForm()}
 
   ngOnInit(): void {
@@ -51,8 +53,11 @@ export class ProductsComponent implements OnInit {
   if(event.target.files.length <= 5){
 this.imageArray.push(event.target.files)
   }else{
-    this.imageArray = [];
-    this.disableButtonTrue = true
+    // this.imageArray = [];
+    // this.disableButtonTrue = true
+ this.toastr.success('You Cannot Select More Then 5 Images!');
+   
+    
   }
   }
   
