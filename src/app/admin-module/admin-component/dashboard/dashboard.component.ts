@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { JsonDataService } from 'src/app/shared-portal/JsonService/json-data.service';
 
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

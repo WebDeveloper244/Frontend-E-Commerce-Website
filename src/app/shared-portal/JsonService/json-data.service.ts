@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import Data from '../JsonFile/data.json'
+import Data from "../JsonFile/data.json"
 @Injectable({
   providedIn: 'root'
 })
