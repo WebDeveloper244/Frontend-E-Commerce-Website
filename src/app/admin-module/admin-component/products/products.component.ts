@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ProductsComponent implements OnInit {
   @ViewChild('files') files:ElementRef|any;
+  
  color=["Red","Black","Blue"];
  categories=["Cap","Hoodies","Watch","Bags"];
  selectSize=["S","M","L","X-L","XX-L"];
@@ -52,10 +53,13 @@ export class ProductsComponent implements OnInit {
   }
 
   getImages(event:any){
+    console.log(event);
+    
   if(event.target.files.length <= 5){
 this.imageArray.push(event.target.files)
   }else{
-    // this.imageArray = [];
+    this.imageArray = [];
+    this.files.nativeElement.value=null
     // this.disableButtonTrue = true
  this.toastr.warning ('You Cannot Select More Then 5 Images!');
   }
