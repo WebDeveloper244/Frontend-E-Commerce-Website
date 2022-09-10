@@ -1,5 +1,7 @@
+
+
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray,  FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
 
@@ -46,6 +48,8 @@ export class ProductsComponent implements OnInit {
   getSize(event:any){
     if(event.target.checked){
      this.newSizeArray.push(event.target.value)
+     
+     
     }
     else{
      this.newSizeArray = this.newSizeArray.filter((value:any)=>value != event.target.value) 
@@ -54,7 +58,7 @@ export class ProductsComponent implements OnInit {
 
   getImages(event:any){
     console.log(event);
-    
+    console.log(this.files);
   if(event.target.files.length <= 5){
 this.imageArray.push(event.target.files)
   }else{
@@ -76,7 +80,24 @@ this.imageArray.push(event.target.files)
   })
  let result= this.myProductForm.value;
   console.log(result);
+
+  // *********************Create Multi-Part-Data**********************\\
+  
+  let multiPartFormData = new FormData()
+  multiPartFormData.append('productName',this.myProductForm.get('productName').value);
+  multiPartFormData.append('quantity',this.myProductForm.get('quantity').value);
+  multiPartFormData.append('price',this.myProductForm.get('price').value);
+  multiPartFormData.append('description',this.myProductForm.get('description').value);
+  multiPartFormData.append('color',this.myProductForm.get('color').value);
+  multiPartFormData.append('companyName',this.myProductForm.get('companyName').value);
+  multiPartFormData.append('category',this.myProductForm.get('category').value);
+  multiPartFormData.append('size',this.myProductForm.get('size').value);
+  multiPartFormData.append('productMaterial',this.myProductForm.get('productMaterial').value);
+  multiPartFormData.append('image',this.myProductForm.get('image').value);
+
   }
+
+  
 
 }
 // console.log(this.ProductForm.get('companyName').setValue('Rameen is the new hacker of the class')); Gettter and Sstter (it get and set the value any Object(productForm))
