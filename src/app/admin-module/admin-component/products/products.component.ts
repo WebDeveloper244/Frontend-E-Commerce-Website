@@ -3,6 +3,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormArray,  FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { ProductService } from 'src/app/product-service/product.service';
 
 
 @Component({
@@ -23,7 +24,8 @@ export class ProductsComponent implements OnInit {
  myProductForm:FormGroup|any
   constructor(
     private formBuilder:FormBuilder,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private createProductService:ProductService
   ) { this.buildForm()}
 
   ngOnInit(): void {
@@ -82,7 +84,7 @@ this.imageArray.push(event.target.files)
   console.log(result);
 
   // *********************Create Multi-Part-Data**********************\\
-  
+
   let multiPartFormData = new FormData()
   multiPartFormData.append('productName',this.myProductForm.get('productName').value);
   multiPartFormData.append('quantity',this.myProductForm.get('quantity').value);
@@ -95,6 +97,10 @@ this.imageArray.push(event.target.files)
   multiPartFormData.append('productMaterial',this.myProductForm.get('productMaterial').value);
   multiPartFormData.append('image',this.myProductForm.get('image').value);
 
+this.createProductService.createProductCart(multiPartFormData).subscribe((responseCommingFromBackend:any)=>{
+console.log(responseCommingFromBackend);
+
+})
   }
 
   
