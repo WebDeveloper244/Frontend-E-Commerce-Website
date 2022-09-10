@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
@@ -9,6 +9,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  @ViewChild('files') files:ElementRef|any;
  color=["Red","Black","Blue"];
  categories=["Cap","Hoodies","Watch","Bags"];
  selectSize=["S","M","L","X-L","XX-L"];
