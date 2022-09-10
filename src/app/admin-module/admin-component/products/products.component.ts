@@ -23,7 +23,7 @@ export class ProductsComponent implements OnInit {
   ) { this.buildForm()}
 
   ngOnInit(): void {
-    this.toastr.warning ('You Cannot Select More Then 5 Images!');
+  
   }
 
   buildForm(){
