@@ -62,7 +62,12 @@ export class ProductsComponent implements OnInit {
     console.log(event);
     console.log(this.files);
   if(event.target.files.length <= 5){
-this.imageArray.push(event.target.files)
+
+// 1st step  this.imageArray.push(event.target.files) 
+
+   [... event.target.files].forEach((file)=>{
+    this.imageArray.push(file)
+   })
   }else{
     this.imageArray = [];
     this.files.nativeElement.value=null
@@ -76,17 +81,19 @@ this.imageArray.push(event.target.files)
    let formControl = new FormControl(elements)
    this.myProductForm.get("size").push(formControl)
   })
-  this.imageArray.forEach((element:any) => {
-   let formControl = new FormControl(element)
-   this.myProductForm.get("image").push(formControl) 
-  })
+
+  // this.imageArray.forEach((element:any) => {
+  //  let formControl = new FormControl(element)                    1st step for single image 
+  //  this.myProductForm.get("image").push(formControl) 
+  // })
+
  let result= this.myProductForm.value;
   console.log(result);
 
   // *********************Create Multi-Part-Data**********************\\
 
   let multiPartFormData = new FormData()
-  multiPartFormData.append('productName',this.myProductForm.get('productName').value);
+  multiPartFormData.append('productName',this.myProductForm.get('productName').value);  // getting value fom myProduct form through getter and setter function
   multiPartFormData.append('quantity',this.myProductForm.get('quantity').value);
   multiPartFormData.append('price',this.myProductForm.get('price').value);
   multiPartFormData.append('description',this.myProductForm.get('description').value);
@@ -95,7 +102,12 @@ this.imageArray.push(event.target.files)
   multiPartFormData.append('category',this.myProductForm.get('category').value);
   multiPartFormData.append('size',this.myProductForm.get('size').value);
   multiPartFormData.append('productMaterial',this.myProductForm.get('productMaterial').value);
-  multiPartFormData.append('image',this.myProductForm.get('image').value);
+
+  // multiPartFormData.append('image',this.myProductForm.get('image').value);   1st step for single image now if u want to get more then one image then loop is used .......
+
+  this.imageArray.forEach((imagesData:any)=>{
+  multiPartFormData.append("images",imagesData)//Appending values to the getData varibale from FormGroup
+  })
 
 this.createProductService.createProductCart(multiPartFormData).subscribe((responseCommingFromBackend:any)=>{
 console.log(responseCommingFromBackend);
