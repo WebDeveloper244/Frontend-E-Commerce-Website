@@ -16,12 +16,17 @@ export class ProductsComponent implements OnInit {
     private Router : Router,
     private messanger : MessangerService,
     private volatileService :SavingDataServiceService
-  ) { }
+  ) { 
+  this.getDataFromservice();
+  }
 
   DataComeFromJson :any=[];
 
+
   ngOnInit(): void {
   }
+
+
   getDataFromservice(){
     this.DataComeFromJson = this.JsonService.getjsonData();
   }
