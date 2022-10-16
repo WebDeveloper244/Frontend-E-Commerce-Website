@@ -1,5 +1,4 @@
 
-
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormArray,  FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
@@ -43,7 +42,7 @@ export class ProductsComponent implements OnInit {
       category:new FormControl ('', Validators.required),
       size: new FormArray([]),
       productMaterial:new FormControl('', Validators.required),
-      image: new FormArray([])
+      // image: new FormArray([]) 1st step for single image
     })
   }
 
@@ -68,6 +67,7 @@ export class ProductsComponent implements OnInit {
    [... event.target.files].forEach((file)=>{
     this.imageArray.push(file)
    })
+   this.imageArray;
   }else{
     this.imageArray = [];
     this.files.nativeElement.value=null
@@ -106,7 +106,7 @@ export class ProductsComponent implements OnInit {
   // multiPartFormData.append('image',this.myProductForm.get('image').value);   1st step for single image now if u want to get more then one image then loop is used .......
 
   this.imageArray.forEach((imagesData:any)=>{
-  multiPartFormData.append("images",imagesData)//Appending values to the getData varibale from FormGroup
+  multiPartFormData.append('images',imagesData)//Appending values to the getData varibale from FormGroup
   })
 
 this.createProductService.createProductCart(multiPartFormData).subscribe((responseCommingFromBackend:any)=>{

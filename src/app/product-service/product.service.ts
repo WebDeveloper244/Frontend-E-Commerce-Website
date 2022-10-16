@@ -9,6 +9,6 @@ export class ProductService {
   constructor(private httpClient:HttpClient) { 
   }
   createProductCart(payLoad:any){
-    return this.httpClient.post('http://localhost:8080/ProductManagement/ProductData',payLoad)
+    return this.httpClient.post('http://localhost:5050/ProductManagement/ProductData',payLoad)
   }
 }
