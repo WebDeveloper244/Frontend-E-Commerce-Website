@@ -9,6 +9,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class ContactUsComponent implements OnInit {
 // *********
   myContactForm:any|FormGroup
+pristine: any;
 // *********
 
 
