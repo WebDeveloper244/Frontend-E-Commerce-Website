@@ -7,8 +7,9 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
-
+// *********
   myContactForm:any|FormGroup
+// *********
 
 
   constructor(
@@ -28,6 +29,11 @@ export class ContactUsComponent implements OnInit {
      PhoneNo: new FormControl ('', [Validators.required,Validators.pattern(/^[0-9]*$/)]),
      Textarea: new FormControl ('', [Validators.required,]),
     })
+  }
+  submitMyContactForm(){
+   let result = this.myContactForm.value 
+   console.log(result);
+   
   }
 
 
