@@ -77,7 +77,8 @@
   </div>
 </div>
 <div class="row">
-  <button type="submit" class="btn button" [ngStyle]="{'border-color': disableButtonTrue ? 'red' : 'black'}"  [disabled]="disableButtonTrue" >Submit</button>
+  <!-- <button type="submit" class="btn button" [ngStyle]="{'border-color': disableButtonTrue ? 'red' : 'black'}"  [disabled]="disableButtonTrue" >Submit</button> -->
+  <button type="submit" class="btn button"  [disabled]="myProductForm.invalid" >Submit</button>
 </div>
 </form>
 

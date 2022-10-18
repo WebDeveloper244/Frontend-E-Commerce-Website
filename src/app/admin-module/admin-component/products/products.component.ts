@@ -1,4 +1,5 @@
 
+
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormArray,  FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
@@ -41,7 +42,7 @@ export class ProductsComponent implements OnInit {
       companyName: new FormControl ('',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
       category:new FormControl ('', Validators.required),
       size: new FormArray([]),
-      productMaterial:new FormControl('', Validators.required),
+      // productMaterial:new FormControl('', Validators.required),
       // image: new FormArray([]) 1st step for single image
     })
   }
@@ -89,6 +90,9 @@ export class ProductsComponent implements OnInit {
 
  let result= this.myProductForm.value;
   console.log(result);
+  // ********************************** Toaster **********************//
+
+  this.toastr.success ('Your Data is Submit 👍');
 
   // *********************Create Multi-Part-Data**********************\\
 
@@ -101,7 +105,8 @@ export class ProductsComponent implements OnInit {
   multiPartFormData.append('companyName',this.myProductForm.get('companyName').value);
   multiPartFormData.append('category',this.myProductForm.get('category').value);
   multiPartFormData.append('size',this.myProductForm.get('size').value);
-  multiPartFormData.append('productMaterial',this.myProductForm.get('productMaterial').value);
+  // multiPartFormData.append('productMaterial',this.myProductForm.get('productMaterial').value);
+
 
   // multiPartFormData.append('image',this.myProductForm.get('image').value);   1st step for single image now if u want to get more then one image then loop is used .......
 
@@ -112,6 +117,8 @@ export class ProductsComponent implements OnInit {
 this.createProductService.createProductCart(multiPartFormData).subscribe((responseCommingFromBackend:any)=>{
 console.log(responseCommingFromBackend);
 
+
+
 })
   }
 
@@ -119,3 +126,4 @@ console.log(responseCommingFromBackend);
 
 }
 // console.log(this.ProductForm.get('companyName').setValue('Rameen is the new hacker of the class')); Gettter and Sstter (it get and set the value any Object(productForm))
+

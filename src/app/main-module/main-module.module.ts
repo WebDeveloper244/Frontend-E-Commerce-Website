@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
     MainModuleComponent,
@@ -37,9 +38,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
+   
     MainModuleRoutingModule,
     FormsModule,
     ReactiveFormsModule
+    
     
   ]
   
