@@ -6,9 +6,9 @@ import { ToastrService } from 'ngx-toastr';
 import { ProductService } from 'src/app/product-service/product.service';
 
 
-@Component({
+@Component({                 // @ means Extra Info
   selector: 'app-products',
-  templateUrl: './products.component.html',
+  templateUrl: './products.component.html',   // its a meta Data Information
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
