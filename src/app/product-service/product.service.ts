@@ -11,4 +11,7 @@ export class ProductService {
   createProductCart(payLoad:any){
     return this.httpClient.post('http://localhost:5050/ProductManagement/ProductData',payLoad)
   }
+  getProductData(){
+    return this.httpClient.get('http://localhost:5050/ProductManagement/GetProductData');
+  }
 }

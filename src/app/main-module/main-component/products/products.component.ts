@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
+import { ProductService } from 'src/app/product-service/product.service';
 import { JsonDataService } from 'src/app/shared-portal/JsonService/json-data.service';
 import { MessangerService } from 'src/app/shared-portal/rxjs-messanger/messanger.service';
 import { SavingDataServiceService } from 'src/app/shared-portal/volatile-service/saving-data-service.service';
@@ -10,20 +11,28 @@ import { SavingDataServiceService } from 'src/app/shared-portal/volatile-service
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  DataComeFromJson :any=[];
+  backEndProductData:any=[];
 
   constructor(
+    
     private JsonService:JsonDataService,
     private Router : Router,
     private messanger : MessangerService,
-    private volatileService :SavingDataServiceService
+    private volatileService :SavingDataServiceService,
+    private getProductDataFromBackend:ProductService,   // 1st step import
   ) { 
+    
   this.getDataFromservice();
+
   }
-
-  DataComeFromJson :any=[];
-
-
-  ngOnInit(): void {
+ 
+  ngOnInit(
+    
+  ): void {
+    this.getProductDataFromBackend.getProductData().subscribe((resultFromBackend:any)=>{
+      this.backEndProductData = resultFromBackend.Result;
+    })
   }
 
 
